@@ -8,26 +8,48 @@ fetch(URL)
   .then(loadImages);
 
 function loadImages(gifImage) {
-  const entries = Object.entries(gifImage)
-  const array = entries[0][1]
+  const entries = Object.entries(gifImage);
+  const array = entries[0][1];
   array.forEach(renderImage);
 }
 
-
 function renderImage(gifImage) {
-  const imageCard = document.createElement ("div")
-  const bodyOfPage = document.getElementById("body")
+  const captionButton = document.createElement("button");
+  const captionForm = document.createElement("form");
+  const imageCard = document.createElement("div");
+  const bodyOfPage = document.getElementById("body");
+  const formInput = document.createElement("input");
+  const captionList = document.createElement("ol");
 
-  imageCard.setAttribute('class','image-card')
-  const imageGif = document.createElement ("img")
-  imageGif.setAttribute('id','card-image')
-  imageGif.setAttribute('class','image')
+  captionButton.innerText = "post";
+  captionButton.setAttribute("type", "submit");
+  captionButton.setAttribute("class", "caption-button");
+  formInput.setAttribute("placeHolder", "cap me...");
+  formInput.setAttribute("type", "text");
+  formInput.setAttribute("name", "caption");
+  formInput.setAttribute("id", "caption");
+  formInput.setAttribute("class", "caption-input");
+  captionForm.setAttribute("id", "caption-form");
+  imageCard.setAttribute("class", "image-card");
+  const imageGif = document.createElement("img");
+  imageGif.setAttribute("id", "card-image");
+  imageGif.setAttribute("class", "image");
   imageGif.src = gifImage.media[0].gif.url;
   imageGif.alt = gifImage.content_description;
 
+  bodyOfPage.append(imageCard);
+  imageCard.append(imageGif);
+  imageCard.append(captionForm);
+  captionForm.append(formInput);
+  captionForm.append(captionButton);
+  imageCard.append(captionList);
 
-  bodyOfPage.append(imageCard)
-  imageCard.append(imageGif)
+  console.log(imageCard);
 
-  console.log(imageCard)
+  captionForm.addEventListener("submit", (e) => {
+	e.preventDefault()
+    const eachCaption = document.createElement("li");
+    captionList.append(eachCaption);
+    console.log(e.target.value);
+  });
 }
