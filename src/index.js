@@ -1,16 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {})
+document.addEventListener("DOMContentLoaded", () => {});
+
+const URL =
+  "https://g.tenor.com/v1/search?q=funny-fail&key=RPJ2769J8BEG&limit=8";
+
+fetch(URL)
+  .then((resp) => resp.json())
+  .then(loadImages);
+
+function loadImages(gifImage) {
+  const entries = Object.entries(gifImage)
+  const array = entries[0][1]
+  array.forEach(renderImage);
+}
 
 
-// const likeBtn = document.getElementById("like-button")
-// const likeNum = document.getElementById("like-count")
-// const image = document.getElementsByClassName("image-card")
+function renderImage(gifImage) {
+  const imageCard = document.createElement ("div")
+  const bodyOfPage = document.getElementById("body")
 
-// likeBtn.addEventListener("click", (e) => console.log(e.target.value))
+  imageCard.setAttribute('class','image-card')
+  const imageGif = document.createElement ("img")
+  imageGif.setAttribute('id','card-image')
+  imageGif.setAttribute('class','image')
+  imageGif.src = gifImage.media[0].gif.url;
+  imageGif.alt = gifImage.content_description;
 
-// function init() {
-//   image.forEach( )
-//   e.forEach(++likeNum)
-// }
 
+  bodyOfPage.append(imageCard)
+  imageCard.append(imageGif)
 
-https://api.imgur.com/3/gallery/search?q=funny
+  console.log(imageCard)
+}
