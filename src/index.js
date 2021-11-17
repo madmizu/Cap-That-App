@@ -17,6 +17,7 @@ function renderImage(gifImage) {
   const captionButton = document.createElement("button");
   const captionForm = document.createElement("form");
   const imageCard = document.createElement("div");
+  const imageGif = document.createElement("img");
   const bodyOfPage = document.getElementById("body");
   const formInput = document.createElement("input");
   const captionList = document.createElement("ol");
@@ -24,14 +25,15 @@ function renderImage(gifImage) {
   captionButton.innerText = "post";
   captionButton.setAttribute("type", "submit");
   captionButton.setAttribute("class", "caption-button");
+
   formInput.setAttribute("placeHolder", "cap me...");
   formInput.setAttribute("type", "text");
   formInput.setAttribute("name", "caption");
-  formInput.setAttribute("id", "caption");
-  formInput.setAttribute("class", "caption-input");
-  captionForm.setAttribute("id", "caption-form");
+  formInput.setAttribute("id", "captionInput");
+
+  captionForm.setAttribute("class", "caption-form");
   imageCard.setAttribute("class", "image-card");
-  const imageGif = document.createElement("img");
+
   imageGif.setAttribute("id", "card-image");
   imageGif.setAttribute("class", "image");
   imageGif.src = gifImage.media[0].gif.url;
@@ -40,16 +42,36 @@ function renderImage(gifImage) {
   bodyOfPage.append(imageCard);
   imageCard.append(imageGif);
   imageCard.append(captionForm);
-  captionForm.append(formInput);
-  captionForm.append(captionButton);
+  captionForm.appendChild(formInput);
+  captionForm.appendChild(captionButton);
   imageCard.append(captionList);
-
-  console.log(imageCard);
 
   captionForm.addEventListener("submit", (e) => {
 	e.preventDefault()
     const eachCaption = document.createElement("li");
+    eachCaption.setAttribute("class", "newCaptions")
     captionList.append(eachCaption);
-    console.log(e.target.value);
-  });
+    const newCaptionEntry = e.target.captionInput.value
+    eachCaption.textContent = newCaptionEntry;
+    e.target.reset()
+
+    const likeBtn = document.createElement("button")
+    likeBtn.setAttribute("class", "like-button")
+    likeBtn.textContent = "♥"
+    eachCaption.appendChild(likeBtn)
+
+    likeBtn.addEventListener("click", e => {
+      const likesSpan = document.createElement("span")
+      likesSpan.setAttribute("class", "like-count") 
+      likesSpan.textContent = ++likesSpan    
+      console.log (likesSpan)
+  
+      console.log(parseInt(likesSpan))
+
+      likeBtn.append(likesSpan)    
+    }
+
+  );
+})
 }
+
