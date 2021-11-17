@@ -60,18 +60,19 @@ function renderImage(gifImage) {
     likeBtn.textContent = "♥"
     eachCaption.appendChild(likeBtn)
 
-    likeBtn.addEventListener("click", e => {
-      const likesSpan = document.createElement("span")
-      likesSpan.setAttribute("class", "like-count") 
-      likesSpan.textContent = ++likesSpan    
-      console.log (likesSpan)
+    const numOfLikes = document.createElement("span")
+    numOfLikes.setAttribute("class", "likeCount")
+    eachCaption.append(numOfLikes)
+   
+    let i = 0
+
+    likeBtn.addEventListener("click", (e) => {
+      ++i 
+      numOfLikes.textContent = i
+      console.log(i)
+        
+      })
   
-      console.log(parseInt(likesSpan))
-
-      likeBtn.append(likesSpan)    
-    }
-
-  );
-})
+    })
 }
 
