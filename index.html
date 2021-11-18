@@ -7,35 +7,30 @@
     <script defer type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
-    <!-- logo -->
-    <img class="logo" src="./assets/capthatapp.png" />
 
-    <!-- image card -->
-    <div id="body">
-      <div class="image-card">
-        <img
-          id="card-image"
-          class="image"
-          src="./assets/image-placeholder.jpg"
-          alt="Title of image goes here too"
-        />
-        <h2 id="card-title" class="title">This is the caption</h2>
-        <div class="likes-section">
-          <button id="like-button" class="like-button">♥</button>
-          <span id="likeCount" class="likes">0</span>
+    <div class="navbar">
+        <div class="logo">
+            <img class= "logoImage" src="./assets/capthatapp.png" ALT="Cap That App Logo"/>
         </div>
-        <ul id="newCaptions" class="newCaptions"></ul>
-        <form id="caption-form" class="caption-form">
-          <input
-            class="caption-input"
-            type="text"
-            name="caption"
-            id="caption"
-            placeholder="Cap Me..."
-          />
-          <button class="caption-button" type="submit">Post</button>
-        </form>
-      </div>
+        
+          <div class ="newGifForm">
+            <form class="newGif" id="newGifEntry">
+              <input
+                class="newImageSubmit"
+                id="newImageId"
+                type="text"
+                name="newImageName"
+                placeholder="Image/gif URL..."
+              />
+              <button class="caption-button" type="submit">Add</button>
+            </form>
+          </div>
     </div>
+        <div id="body">
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>      
   </body>
 </html>

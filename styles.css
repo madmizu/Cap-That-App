@@ -6,14 +6,27 @@
 
 body {
   padding: 20px;
-
   background-color: #fafafa;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fafafa;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .logo {
   margin-bottom: 20px;
-  width: 50%;
-  justify-content: center;
+  display: block;
+  text-align: center;
+}
+
+.logoImage {
+  width: 500px;
 }
 
 .image-container {
@@ -141,3 +154,4 @@ body {
 .likeCount {
   padding-bottom: 10%;
 }
+
