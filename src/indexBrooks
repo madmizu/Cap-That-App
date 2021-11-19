@@ -42,7 +42,6 @@ function renderImage(imageGif) {
   const imageCard = document.createElement("div");
   const bodyOfPage = document.getElementById("body");
   const formInput = document.createElement("input");
-  const captionScroll = document.createElement("div")
   const captionList = document.createElement("ul");
   const imageDiv = document.createElement("div")
   const topCaption = document.createElement("h2")
@@ -58,9 +57,8 @@ function renderImage(imageGif) {
 
   captionForm.setAttribute("class", "caption-form");
   imageCard.setAttribute("class", "image-card");
-  imageDiv.setAttribute("class", "gifAndCaption")
-  captionList.setAttribute("class", "caption-ul")
-  captionScroll.setAttribute("class", "captionScroll")
+  imageDiv.setAttribute("class", "gifAndCaption");
+  captionList.setAttribute("class", "caption-ul");
 
   bodyOfPage.append(imageCard);
   imageDiv.append(imageGif);
@@ -68,8 +66,7 @@ function renderImage(imageGif) {
   imageCard.append(captionForm);
   captionForm.appendChild(formInput);
   captionForm.appendChild(captionButton);
-  imageCard.append(captionScroll);
-  captionScroll.append(captionList)
+  imageCard.append(captionList);
   imageDiv.append(topCaption);
 
 
