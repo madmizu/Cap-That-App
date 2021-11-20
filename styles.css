@@ -152,6 +152,8 @@ body {
   display: flex;
   text-align: initial;
   /* flex-direction: row; */
+  margin: 1%;
+  box-shadow: 1px 1px 3px black
 }
 
 .likeCount {
@@ -167,4 +169,11 @@ body {
 .captionScroll {
   overflow-y: auto;
   height: 110px;
+}
+
+div#body {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 6%;
+  align-items: center;
 }
