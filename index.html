@@ -7,30 +7,35 @@
     <script defer type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
-
+    
     <div class="navbar">
-        <div class="logo">
-            <img class= "logoImage" src="./assets/capthatapp.png" ALT="Cap That App Logo"/>
+      <div class="logo">
+          <img class= "logoImage" src="./assets/capthatapp.png" ALT="Cap That App Logo"/>
+      </div>
+      
+        <div class ="newGifForm">
+          <form class="newGif" id="newGifEntry">
+            <input
+              class="newImageSubmit"
+              id="newImageId"
+              type="url"
+              name="newImageName"
+              placeholder="Image/gif URL..."
+            />
+            <button class="caption-button" type="submit">Add</button>
+          </form>
         </div>
-        
-          <div class ="newGifForm">
-            <form class="newGif" id="newGifEntry">
-              <input
-                class="newImageSubmit"
-                id="newImageId"
-                type="url"
-                name="newImageName"
-                placeholder="Image/gif URL..."
-              />
-              <button class="caption-button" type="submit">Add</button>
-            </form>
-          </div>
+  
     </div>
+ 
         <div id="body">
           <br>
           <br>
           <br>
           <br>
+          <br>
+          
         </div>      
+        
   </body>
 </html>

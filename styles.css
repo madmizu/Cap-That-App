@@ -1,26 +1,26 @@
 * {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
 }
 
 body {
-  padding: 20px;
-  background-color: #fafafa;
+  margin:100px auto 0px;
+  background-image: linear-gradient(315deg, #ffffff 0%, #000000 95%);
+  background-color: #000000;
+  
 }
 
 .navbar {
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background-color: #fafafa;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
+  
 }
 
 .logo {
-  margin-bottom: 20px;
+  margin-top: 20px;
   display: block;
   text-align: center;
 }
@@ -34,7 +34,7 @@ body {
 
 }
 
-.image-card {
+#image-card {
   width: 375px;
   height: 500px;
   display: block;
@@ -45,7 +45,8 @@ body {
   margin: 4rem;
   padding: 1rem;
   display: inline-block;
-  box-shadow: 3px 4px #747474;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
   background-color: white;
 }
 
@@ -110,11 +111,18 @@ body {
   letter-spacing: 0.2px;
 }
 
+.newCaptions {
+  display: flex;
+  text-align: initial;
+  /* flex-direction: row; */
+  margin: 1%;
+  box-shadow: 1px 1px 3px black
+}
+
 .caption-form {
   width: 100%;
   border-top: 1px solid #00000020;
-  padding: 10px;
-  margin-top: 10px;
+  box-shadow: 1px 1px 3px black
 }
 
 #captionInput {
@@ -148,14 +156,6 @@ body {
   outline: none;
 }
 
-.newCaptions {
-  display: flex;
-  text-align: initial;
-  /* flex-direction: row; */
-  margin: 1%;
-  box-shadow: 1px 1px 3px black
-}
-
 .likeCount {
   padding-bottom: 10%;
   padding: 2%;
@@ -168,12 +168,11 @@ body {
 
 .captionScroll {
   overflow-y: auto;
-  height: 110px;
+  height: 125px;
 }
 
 div#body {
   display: flex;
-  flex-direction: column-reverse;
-  padding-top: 6%;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
