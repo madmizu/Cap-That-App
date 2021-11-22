@@ -1,21 +1,25 @@
 # Cap-That-App
 
 The basic story of your application
-- (BOTH) As a user, I want to see photos from imgur API
+- (BOTH) As a user, I want to see photos from tenor API
 - (BOTH) As a user, I want to see a photo with captions
-- (BROOKS) As a user, I want to vote for my favorite captions by clicking
-- (MADI) As a user, I want to submit my own caption that will appear with all other captions and that can be voted on
-- (BROOKS) As a user, I want to see the caption with the highest vote at the top of the list of captions
-- (MADI) As a user, I want to submit my own photos that will appear with all other photos
+- (BOTH) As a user, I want to vote for my favorite captions by clicking
+- (BOTH) As a user, I want to submit my own caption that will appear with all other captions and that can be voted on
+- (BOTH) As a user, I want to submit my own photos that will appear with all other photos
+- (BROOKS) As a user, I want to see my submitted photo/gif appear as the first caption on the page
+- (MADI) As a user, I want to see the caption with the highest vote at the top of the list of captions
+
 The core features of your MVP
-- See funny photos, create captions for it, and vote on the best captions
+- See funny photos/gifs, create captions for it, and vote on the best captions
+
 The API data you'll be using and how you'll use it
-- https://apidocs.imgur.com/#311b0a17-29d2-48f5-b5cd-09dcc12863f5
-- https://imgur.com/search?q=funny
+- https://g.tenor.com/v1/search?q=funny-fail&key=RPJ2769J8BEG&limit=8
+
 Challenges you expect to face
 - Pulling a sample size of photos from imgur for our MVP
 - Making sure the caption with the most votes appear at the top
 - Being able to click to the next photo that will maintain all event features
+
 How you are meeting the requirements of the project
 Your app must be a HTML/CSS/JS frontend that accesses data from a public API. All interactions between the client and the API should be handled asynchronously and use JSON as the communication format.
     - Using API data from imgur
