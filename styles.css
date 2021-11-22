@@ -176,3 +176,7 @@ div#body {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.newGif {
+  text-align: -webkit-center;
+}
